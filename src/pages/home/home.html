@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()">
+
+    <ion-slide>
+         <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+           <ion-icon ios="logo-usd" md="logo-usd" color="primary"></ion-icon>
+         </div>
+         <div>
+           <h2>Split Wisely</h2>
+           <p>Every ruppee counts.<br>Save Money</p>
+         </div>
+       </ion-slide>
+
+       <ion-slide>
+         <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+           <ion-icon ios="ios-calculator" md="md-calculator" color="primary"></ion-icon>
+         </div>
+         <div>
+           <h2>Cal'c on Tap</h2>
+           <p>Say no to complex Calculations</p>
+         </div>
+       </ion-slide>
+
+       <ion-slide>
+         <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+           <ion-icon ios="ios-paper" md="md-paper" color="primary" ></ion-icon>
+         </div>
+         <div>
+           <h2>Simple yet Useful</h2>
+           <p>Don't touch the paper again</p>
+         </div>
+       </ion-slide>
+  </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
+</ion-content>
