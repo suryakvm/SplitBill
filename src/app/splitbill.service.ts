@@ -21,6 +21,7 @@ calculate(persons: Person[]): Observable<any>{
   .map(res => res.json());
 }
 
+
 // private extractData(res: any) {
 //    var body = res.json();  // If response is a JSON use json()
 //    if (body) {
