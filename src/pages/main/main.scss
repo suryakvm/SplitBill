@@ -1,10 +1,67 @@
 page-main {
 
-}
-.list-avatar-page {
-  ion-note {
-    font-size: 12px;
-    align-self: flex-start;
-    margin-top: 14px;
+  @font-face {
+  font-family: Amethysta-Regular;
+  src: url(/assets/fonts/Amethysta-Regular.ttf) format("ttf");
+  font-weight: 300
   }
+
+.app_header{
+font-family : Amethysta-Regular !important;
+}
+
+  .list-avatar-page {
+    ion-note {
+      font-size: 12px;
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+  }
+  ion-icon {
+     margin-top: 5%;
+    }
+.headercss{
+margin-top: 0px !important;
+color: #444;
+text-align: center;
+font-size: 35px;
+}
+.addicon{
+  margin-top: 1% !important;
+margin-right: 3%;
+}
+
+.quote{
+  width: 100%;
+  text-align:center;
+   letter-spacing: 2px;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+// .start_btn{
+//   position: absolute;
+//   bottom: 20px;
+//   width: 100%;
+//   background: #333;
+// }
+
+// .welcome{
+//   // position:relative;
+//   display:block;
+//   margin: auto;
+//
+//   width: 50%;
+//   // justify-content: flex-start;
+//   // align:center;
+// }
+// .welcome_img{
+// display: flex;
+// margin: auto;
+// position: relative;
+// top: 100px;
+// width: 50%;
+// }
+
+
 }

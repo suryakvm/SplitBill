@@ -17,20 +17,21 @@
 
 <ion-content padding>
   <ion-list>
-
     <ion-item>
       <ion-label floating>Name</ion-label>
-      <ion-input [(ngModel)]="name" type="text"></ion-input>
+      <ion-input [(ngModel)]="name" maxlength="6" type="text" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Amount</ion-label>
-      <ion-input [(ngModel)]="amount" type="text"></ion-input>
+      <ion-input [(ngModel)]="amount" type="number"></ion-input>
     </ion-item>
 
   </ion-list>
   <div padding>
-  <button block ion-button (click) = "AddtoList()" >Add to List</button>
-</div>
+  <button block style = "letter-spacing:1px" ion-button color="primary" (click) = "AddtoList()" >Add to List</button>
+  </div>
+
+
 
 </ion-content>

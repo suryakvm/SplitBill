@@ -6,9 +6,9 @@
 -->
 <ion-header>
   <ion-toolbar>
-    <ion-title style = "text-align: center">S  p  l  i  t  B  i  l  l</ion-title>
+    <ion-title class = "app_header" ><b>S P L I T B I L L</b></ion-title>
     <ion-buttons end>
-        <button (click)="submitData()" ion-button icon-only color="royal">Submit</button>
+        <button  *ngIf = "persons.length != 0" (click)="submitData()" ion-button icon-only color="royal">Submit</button>
       </ion-buttons>
   </ion-toolbar>
 
@@ -17,14 +17,6 @@
 
 <ion-content padding class="list-avatar-page">
 <!-- <ion-list>
-  <ion-item *ngFor = "let person of persons">
-    <ion-icon ios="ios-person" md="md-person" item-start></ion-icon>
-      {{person.name}}
-    <span item-end>{{person.amount}}</span>
-  </ion-item>
-</ion-list> -->
-
-<ion-list>
   <ion-item-sliding *ngFor = "let person of persons; let i = index">
     <ion-item>
       <ion-avatar item-start>
@@ -38,7 +30,7 @@
       <button ion-button color="danger" (click) = "popList(i)" >
          <ion-icon name="delete"></ion-icon>
         <span style="padding-bottom: 11px;  margin-top: -20px;">
-            <!-- <ion-icon ios="ios-trash" md="md-trash"></ion-icon> -->
+
             delete
         </span>
       </button>
@@ -46,11 +38,46 @@
   </ion-item-sliding>
 </ion-list>
 
-   <button style = "position: fixed;
-    bottom: 20px;
-    right: 20px;" ion-button round color (click)="openDetails()">Add</button>
-      <!-- <ion-fab right bottom>
-     <button ion-fab (click)="openDetails()" ><ion-icon name="add"></ion-icon></button>
+  <ion-fab  right bottom>
+    <button ion-fab (click)="openDetails()"><ion-icon name="add"></ion-icon></button>
   </ion-fab> -->
+
+  <div  *ngIf = "persons.length != 0">
+   <ion-list>
+    <ion-item-sliding *ngFor = "let person of persons; let i = index">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src={{person.imgName}} style="width : 60px;height:60px">
+        </ion-avatar>
+        {{person.name}}
+      <span item-end style = "color:green">{{person.amount}}</span>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click) = "popList(i)" >
+           <ion-icon name="delete"></ion-icon>
+          <span style="padding-bottom: 11px;  margin-top: -20px;">delete  </span>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+    <ion-fab  style = "position:fixed" right bottom>
+        <button ion-fab  (click)="openDetails()"><ion-icon name="add"></ion-icon></button>
+
+      </ion-fab>
+
+  </div>
+<!-- //Balancing bills is never this easy -->
+    <div *ngIf = "persons.length == 0">
+      <br>
+      <p class = "quote">"BALANCING BILLS IS NEVER THIS EASY"</p>
+      <br>
+      <h2 class="headercss">WELCOME</h2>
+        <img style="margin: 0 auto;width : 100%; border-radius: 50%;" src="assets/imgs/happiness.png">
+        <br>
+
+      <button style="width:100%; bottom: 0px;letter-spacing:1px" ion-button color="primary" (click)="openDetails()">Add Friends</button>
+    </div>
+
 
 </ion-content>

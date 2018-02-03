@@ -17,6 +17,18 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
 ion-content {
+  @font-face {
+  font-family: AbhayaLibre-Regular;
+  src: url(/assets/fonts/AbhayaLibre-Regular.ttf) format("ttf");
+  font-weight: 200
+  }
+
+  @font-face {
+  font-family: Lato-Light;
+  src: url(/assets/fonts/Lato-Light.ttf) format("ttf");
+  font-weight: 200
+  }
+
     background-color: #EFEFEF !important;
-    font-family:'Raleway';
+      font-family:'Prompt' !important;
 }
